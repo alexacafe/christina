@@ -1,0 +1,54 @@
+<!<DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet">
+    <style>
+     body {
+               background-image: url("http://kawaii.kawaii.at/img/off-white-Cosmo-double-gauze-chicken-animal-fabric-179396-1.JPG");
+         background-size: cover;
+                color: #462255;
+                text-align: center;
+                font-size: 40px;
+                font-family: 'Annie Use Your Telescope', cursive;
+        }
+        div {
+            margin:auto;
+            margin-top: 100px;
+        }
+
+    </style>
+<title></title>
+    </head>
+    <body>
+        <div>
+            <img src="leftarrow.png" onclick="goLeft()">
+            <img src="rightarrow.png" onclick="goRight()">
+            <p id="picture"><img src="sunset.png"> </p>
+            
+        </div>
+        
+        <script>
+            var images = ["Butterflysilhoette.png", "Ferriswheel.png","sunset.png","trees.png","Waterdrops.png","Floatinglanterns.png","city.png", "dog.png", "Rosemary.png", "OrangeSunflower.png", "glass.png", "flowers1.png"];
+            var index = 0;
+            function goLeft()
+            {
+                index--;
+                if (index < 0){
+                    index=images.length-1;
+                }
+                document.getElementById("picture").innerHTML = "<img src='" + images[index] + "' height='600'>";
+            }
+            
+            function goRight()
+            {
+                index++;
+                if (index >= images.length) {
+                    index=0;
+                }
+                document.getElementById("picture").innerHTML = "<img src='" + images[index] + "' height='600'>";
+            }
+        
+        
+        </script>
+    </body>
+</html>
